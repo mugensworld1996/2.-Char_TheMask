@@ -1,0 +1,269 @@
+
+                                           8
+                                        8888888
+                                    888888   888888
+                                 888888       88888888
+                              88888    88     88888888888
+                          888888    88888     888888888888888
+                       888888    88888888     888888888888888888
+                    88888    888888888888     8888888888888   88888
+                888888      8888888888888     8888888888888      88888
+             888888        88888888888888     8888888888888         888888
+          888888           88888888888888     8888888888888            888888
+       88888              888888888888888     8888888888888           8    88888
+   888888    8888         888888888888888     8888888888888           8888    888888
+ 88888   888888888       8888888888888888     8888888888888           8888888    88888
+888   8888888888888     88888888888888888     8888888888888           88888888888   888
+888  888888888888888    88888888888888888     8888888888888           888888888888  888
+888  888888888888888   888888888888888888     8888888888888           888888888888  888
+888  8888888888888888 8888888888888888888     8888888888888           888888888888  888
+888  888888888888888888888888888888888888     8888888888888           888888888888  888
+888  888888888888888888888888888888888888     8888888888888      8    888888888888  888
+888  888888888888888888888888888888888888     8888888888888     888   888888888888  888
+888  888888888888888888888888888888888888     8888888888888    8888   888888888888  888
+888  888888888888888888888888888888888888     8888888888888   888888  888888888888  888
+888  888888888888888888888888888888888888     8888888888888  88888888 888888888888  888
+888  888888888888888888888888888888888888     8888888888888 8888888888888888888888  888
+888  8888888888888888888888 8888888888888     888888888888888888888888888888888888  888
+888  888888888888 88888888  8888888888888     888888888888888888888888888888888888  888
+888  888888888888  888888   8888888888888     888888888888888888888888888888888888  888
+888  888888888888   88888   8888888888888     888888888888888888888888888888888888  888
+888  888888888888    888    8888888888888     888888888888888888888888888888888888  888
+888  888888888888     8     8888888888888     888888888888888888888888888888888888  888
+888  888888888888           8888888888888     888888888888888888888888888888888888  888
+888  888888888888           8888888888888     8888888888888888888 8888888888888888  888
+888  888888888888           8888888888888     888888888888888888   888888888888888  888
+888  888888888888         8888888888888888888 88888888888888888    888888888888888  888
+888   88888888888       8888               88              8888     8888888888888   888
+ 8888     8888888     8888     888        88          88     888     88888888     8888
+   888888    8888    8888    888 888     88          8  8     888     8888    888888
+       88888    8    8888  888     888  88        88  88  88  8888         88888
+          888888    8888   88       88    88     8  8    8  8  888     888888
+             888888  88    888     888      88    88  88  88   888  888888
+                 888888      888 888      88         8  8       888888
+                    88         888      88            88        888
+                    88              888888888888888              88
+                    88           8888888       8888888           88
+                   88          888888             888888          88
+                   88       8888    888888   888888    888        88
+                    88    8888         888888888         8888    88
+                     8888888               8               8888888
+
+  :@@@@@+ ..%@@@@% .@@@@     .@@  @@@@@@@@@@+ -@@@@@@@@@..@@@@@@.  .@@ :@@@  +@@@@@@@@@*
+  #@*@@@# .@#%@@@: #@@@*     %@. @@@@.        @@@@-      -@.@@@@= .-@- :+@  -@@@%
+ :@%-@@@@:@*-@@@@..@@@@     .@+ +@@@# @@@@@  :@@@@@@@@@..@@.*@@@@. %%  **   #@@@@@@@@.
+ *@..@@@@@* #@@@: #@@@+     %@:.@@@@   @@@@+ @@@@+      -@:  @@@@=-@=       '@@@@@@@@@-
+.@%..@@@@+ :@@@@. @@@@:   ..@+ +@@@# .-@@@@ :@@@@.     .@%   #@@@%%@.            :@@@%
++@: .@@@=  *@@@=  *@@@@@@@@@'  '@@@@@@@@@   @@@@@@@@@@ =@=   .@@@@@*      .@@@@@@@@@*
+
+         @@@@  .@@@@#  .@%  @@@@@@@@@@  .@@@@@@@@@@.  @@@@       @@@@@@@@@@
+         @@@@ .#@@@@# .%% :@@@%.  #@@@+ %@@@* .:@@@@.+@@@#      =@@@%   @@@@.
+         @@@@.+@:@@@#.%@ .@@@@-  :@@@@..@@@@%%%@@@@: %@@@.      %@@@: .#@@@+.
+         @@@@=@.:@@@#*@. :@@@@.  *@@@# %@@@#=@@@@=  -@@@#      :@@@%  .@@@@.
+         @@@@@:.:@@@@@.  #@@@: ..@@@@ .@@@@. #@@@@. #@@@-      #@@@-  +@@@+
+         @@@@=  :@@@@-    @@@@@@@@@@  *@@@*  -@@@@..@@@@@@@@@ .@@@@@@@@@@
+
+========================================================================================
+
+
+
+# The Mask (1994) | MUGEN Project
+
+## Sobre este proyecto
+
+Este proyecto busca recrear a The Mask, el icónico personaje de la película de 1994, como un personaje completamente jugable para MUGEN.
+
+El objetivo es representar el estilo exagerado y caricaturesco del personaje, combinando sus expresiones, humor, transformaciones y movimientos imposibles con un sistema de combate dinámico propio de MUGEN.
+
+Actualmente el personaje se encuentra en una etapa temprana de desarrollo.
+
+==*+-.
+-+.:*%=..
+::*+-#**+..
+:+#**+=.+%=.                               ..........
+..:*#%+.--**:                  ..:=*#%%#*++=-------=+**#%%*=:.
+%+:..-**-:+#*-.           .-*#*+-::....                ...:-=*#=.
+#+----+%*--:-*-.      .-**=-:.                              ..-#= .
+-*-...+%=.:=#=.   .+*=..                                       .:%.
+.-%#+=---*#==+=#-. :#-.                                         ..#:
+ .-*=:....=%**-:*-.++.                                           .=*
+  .:*%**#*+*%%-.*%:#-.                                           .:%.
+    .=*...:+#%+--**%:.                                            :#-
+     .:*%%%#+=*%-*%@:.                                            .=#.
+      ..=#%#*++#%#*#:.              ...-+*###**+=------=+***%#*=:..:#.
+        .:*=...:*%*+.       ...=***==--:::.                    .::-=*%
+          .=#+--+#%+.  ..-**==-:...                                .-#.
+           .:+*+-+%=:=+++-..                     .....::---====+++==+%+++++++===--:.... 
+             .:+*+%#+:..         . ....:--====+*****++==-:::......:::--=====+++++*#%@%#*
+                .=%-.     ...::--=**#*+=::...      ....:::--=***##*+=-::............:-=*
+                 .#-...:-+#%#=-..       ......::-+*#%%#+=-::::::::::...                 
+            .....:%%%*-:..  ........:=*#%%%*++**###*==-::.... -:....-#%-.               
+          ..=#%*-:.... ..:=+#%%#*++*#%%*+=-:.......          :* .:##.              :#*:.
+     .:=#*=-:.:-+*##*+=-==*##++--::......   .-=..     .      .#. .  .=#.         .:=#*-.
+..-+*++****+==-::..-++=+=:...          .:=:-=-..              .:*.   .-#.    ..-+*+=:...
+#%%*+=-:...      -%+:..*..          .   .----.       . ...:.. ..-= .:.-*-=+**+=-:..
+=:.              -%-*:--..=+==+*+=-..   :-:--.   ..:=*###+-=++:..-.:+.-#=:...
+.                .#-=:=+-*:.=%##@@@@#*==++--++-=+#%@@@@%*%#-::#=: .=: -#.
+.                 *==-.-*###*%==%@@%+*%#*-::-+=+%*=#%@%#+##-==-:..:*..=*.
+--:............::+#%:. :+-+#=-=**+=-=+*+.  .-+=+=-:==-::+*+.:: . .=-:*- .
+....:-======-:.....#%:.      ...--:..  :=.  :-.    ......         .=--#.
+                   .%:.            .   .-: --.                 ..=+-#: .
+                    :#:.           .:+--=.  .--:+-.            .-#+:*=.
+                     +#-.       ..-++-...  .....:++-..        .+=#:**.
+                     -##.. .-=++=-:.:=++=:..-+++=:.:--=+++-.  -::+:%.
+                     :#--.:#:.:.       .:+++=.         .:.:#..*.-.-#.
+                     .%:*.-=.-*#+==------:::-----------+%+.+..*.*.++.
+                     .%:+:.#.::=@#++*+**+#%%#*##+*+*+*%@-..#.-:..:#:
+                      .%-.  +: ..%@%%+-- .:- .--:*%#*%#: .#.*. .:%.
+                       .+%. .+: .-#%+:--=.--.----:=*##:..*.+. .**.
+                        .:+*..=:..=**#+:-.:-.-::=+#+*:..+:.. -#-.
+                          .:#+.=:..=+:-=++##**+==--+:. --. :#=.
+                            .=#-=. .:=====---=====-.. .-..+*.
+                              ..+#..:=---==++=----=:..++#:.
+                                .+*. .:..      .:.. .-%*
+                                 :*=.     ...      .:#-
+                                 .:#=.    ::.      :#:
+                                  ..-*#*+*#%#*+=+*#+
+
+## Filosofía del proyecto
+
+Este proyecto sigue la filosofía clásica de la comunidad MUGEN:
+
+> MUGEN es de la comunidad para la comunidad.
+
+Todo el contenido aquí presente es completamente libre:
+
+- Libre para usar
+- Libre para modificar
+- Libre para estudiar
+- Libre para redistribuir
+
+No existen:
+- Paywalls
+- Bloqueos
+- Monetización
+- Restricciones comunitarias
+
+El objetivo es compartir conocimiento, recursos y contenido con la comunidad.
+
+## Desarrollo del personaje
+
+Los sprites de este personaje están siendo creados desde cero utilizando distintas herramientas de IA y procesos manuales de edición.
+
+### Pipeline de desarrollo
+
+1. Creación de sprites base
+2. Conversión a estilo 3D
+3. Generación de animaciones
+4. Conversión a video
+5. Extracción de frames
+6. Conversión final a BMP para MUGEN
+
+### Herramientas utilizadas
+
+- ChatGPT
+- Grok
+- Gemini
+- A2E
+- Vidu
+- VLC
+- Fighter Factory Clasic
+
+## Base del proyecto
+
+El personaje está siendo desarrollado utilizando una base de código ya existente de MUGEN para agilizar la implementación de estados, física y comportamiento general.
+
+Sobre esa base se están creando desde cero:
+
+- Nuevos sprites
+- Nuevas animaciones
+- Sistema de ataques
+- Efectos visuales
+- Sonidos
+- Mecánicas propias del personaje
+- Expresiones faciales
+- Variantes futuras
+
+## Características planeadas
+
+El objetivo es representar las habilidades más icónicas de The Mask vistas en la película y en otros medios.
+
+Entre ellas:
+
+- Expresiones exageradas
+- Transformaciones instantáneas
+- Armas caricaturescas
+- Martillos gigantes
+- Pistolas imposibles
+- Dinamita
+- Bailes
+- Ataques cómicos
+- Objetos saliendo de la nada
+- Movimientos inspirados en caricaturas clásicas
+- Efectos visuales exagerados
+
+## Estado actual
+
+🚧 Proyecto en desarrollo temprano.
+
+Actualmente aún faltan:
+
+- Specials
+- Supers
+- IA
+- Throws
+- Intro
+- Win Poses
+- Taunts
+- FX avanzados
+- Sonidos definitivos
+- Balance general
+
+## Planes futuros
+
+- Más animaciones
+- Ataques cinematográficos
+- Sistema de transformaciones
+- Intro especial
+- Finales
+- Compatibilidad con distintos Screenpacks
+- IA avanzada
+- Nuevos efectos visuales
+- Más referencias a la película
+
+## Créditos
+
+### Proyecto actual
+- Mugen's World
+
+### Herramientas utilizadas
+- ChatGPT
+- Grok
+- Gemini
+- A2E
+- Vidu
+
+### Personaje original
+
+The Mask es un personaje creado por Mike Richardson para Dark Horse Comics.
+
+La adaptación cinematográfica de 1994 fue producida por New Line Cinema.
+
+Todos los derechos del personaje pertenecen a sus respectivos propietarios.
+
+## Notas finales
+
+Gracias a todas las personas que mantienen viva la comunidad MUGEN.
+
+Este proyecto existe gracias al trabajo compartido de desarrolladores, artistas y creadores que durante décadas han mantenido vivo este motor de combate.
+
+The Mask pertenece a sus respectivos propietarios.
+
+Este es un proyecto fan-made, desarrollado con fines educativos, de preservación y entretenimiento, sin ningún propósito comercial.
+
+
+
+
+
+
+Ssssssssssmokin!
