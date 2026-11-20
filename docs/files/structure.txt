@@ -1,0 +1,45 @@
+============================================================
+MUGEN CHARACTER STRUCTURE
+============================================================
+
+Proyecto:
+D:\Cantoral\3. Personal\2. Proyectos\1. Mugen\2. Chars\2. Char_TheMask\TheMask_Char
+
+Generado:
+jue. 12/11/2026 22:32:42.90
+
+============================================================
+
+Listado de rutas de carpetas
+El n£mero de serie del volumen es 00000096 B64D:88B4
+D:\CANTORAL\3. PERSONAL\2. PROYECTOS\1. MUGEN\2. CHARS\2. CHAR_THEMASK\THEMASK_CHAR
+|   mascara.def
+|   
++---assets
+|   |   mascara.air
+|   |   mascara.sff
+|   |   mascara.snd
+|   |   
+|   \---assets
+|       \---mascara.sff
+|           \---palette
+|                   mascara.act
+|                   mascara2.act
+|                   
++---logic
+|   +---combat
+|   |       unarmed.cns
+|   |       
+|   +---commands
+|   |       mascara.cmd
+|   |       
+|   \---core
+|           constants.cns
+|           core.cns
+|           intro.cns
+|           system.cns
+|           
+\---palette
+        mascara.act
+        mascara2.act
+        

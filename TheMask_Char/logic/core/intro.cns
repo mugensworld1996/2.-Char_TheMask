@@ -1,0 +1,139 @@
+;==============================================================================
+; LA MASCARA - INTRODUCCIONES CINEMATICAS ESTILO MKX
+; MUGEN 1.0
+;
+; Action 190 = Espera (un fotograma, definida en mascara.air)
+; Action 191 = Intro cinematica A
+; Action 192 = Intro cinematica B
+; Action 193 = Fondo cinematografico (lo administra system.cns)
+;
+; Seleccion del mirror: P1 elige 191 o 192; P2 usa la contraria.
+; Cuando P2 combate otro personaje, elige su propia intro.
+;==============================================================================
+
+;==========================================================================
+; INTROS MKX - MW / MUGEN 1.0
+; Compatibles por nombre exacto del [Info] name del .def:
+;   mw_Raziel, mw_Mascara
+; Para ampliar el roster, agregar el nuevo name en los dos grupos de
+; trigger1/trigger2 de sincronizacion y como != en los fallbacks de P2.
+;==========================================================================
+[Statedef 190]
+type = S
+movetype = I
+physics = S
+ctrl = 0
+anim = 190
+velset = 0,0
+
+[State 190, Mantener Intro]
+type = AssertSpecial
+trigger1 = 1
+flag = Intro
+
+; P2 usa la complementaria de P1 si su enemigo es uno de los personajes mw.
+[State 190, MW P2 usa 192 cuando rival usa 191]
+type = ChangeState
+triggerall = RoundState = 1
+triggerall = TeamSide = 2
+triggerall = NumEnemy = 1
+triggerall = EnemyNear, StateNo = 191
+trigger1 = EnemyNear, Name = "mw_Raziel"
+trigger2 = EnemyNear, Name = "mw_Mascara"
+value = 192
+
+[State 190, MW P2 usa 191 cuando rival usa 192]
+type = ChangeState
+triggerall = RoundState = 1
+triggerall = TeamSide = 2
+triggerall = NumEnemy = 1
+triggerall = EnemyNear, StateNo = 192
+trigger1 = EnemyNear, Name = "mw_Raziel"
+trigger2 = EnemyNear, Name = "mw_Mascara"
+value = 191
+
+; P1 decide la intro; P2 compatible espera a P1 para elegir la contraria.
+[State 190, P1 elige 191]
+type = ChangeState
+triggerall = RoundState = 1
+triggerall = TeamSide = 1
+trigger1 = Random < 500
+value = 191
+
+[State 190, P1 elige 192]
+type = ChangeState
+triggerall = RoundState = 1
+trigger1 = TeamSide = 1
+value = 192
+
+; P2 frente a oponente no MW mantiene el comportamiento aleatorio.
+[State 190, P2 no compatible elige 191]
+type = ChangeState
+triggerall = RoundState = 1
+triggerall = TeamSide = 2
+trigger1 = NumEnemy != 1
+trigger1 = Random < 500
+trigger2 = NumEnemy = 1
+trigger2 = EnemyNear, Name != "mw_Raziel"
+trigger2 = EnemyNear, Name != "mw_Mascara"
+trigger2 = Random < 500
+value = 191
+
+[State 190, P2 no compatible elige 192]
+type = ChangeState
+triggerall = RoundState = 1
+triggerall = TeamSide = 2
+trigger1 = NumEnemy != 1
+trigger2 = NumEnemy = 1
+trigger2 = EnemyNear, Name != "mw_Raziel"
+trigger2 = EnemyNear, Name != "mw_Mascara"
+value = 192
+
+[State 190, Ocultar espera]
+type = AssertSpecial
+trigger1 = 1
+flag = Invisible
+
+;------------------------------------------------------------------------------
+; Intro A: Action 191
+;------------------------------------------------------------------------------
+[Statedef 191]
+type = S
+movetype = I
+physics = S
+ctrl = 0
+anim = 191
+velset = 0,0
+
+[State 191, Mantener intro]
+type = AssertSpecial
+trigger1 = 1
+flag = Intro
+
+[State 191, Terminar intro]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;------------------------------------------------------------------------------
+; Intro B: Action 192
+;------------------------------------------------------------------------------
+[Statedef 192]
+type = S
+movetype = I
+physics = S
+ctrl = 0
+anim = 192
+velset = 0,0
+
+[State 192, Mantener intro]
+type = AssertSpecial
+trigger1 = 1
+flag = Intro
+
+[State 192, Terminar intro]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1

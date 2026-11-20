@@ -1,6 +1,6 @@
 [Info]
-name="Mascara"
-displayname="Mascara"
+name="mw_Mascara"
+displayname="mascara"
 versiondate=15/03/2026
 mugenversion=1.0
 author="MugensWorld"
@@ -9,12 +9,15 @@ pal.defaults=1,
 sprite=assets/mascara.sff
 sound=assets/mascara.snd
 anim=assets/mascara.air
-cmd=logic/mascara.cmd
-cns=logic/mascara.cns
-st=logic/mascara.cns
+cmd=logic/commands/mascara.cmd
+cns=logic/core/constants.cns
+st=logic/core/core.cns
 stcommon=common1.cns
 pal1=palette/mascara.act
 pal2=palette/mascara2.act
+st1=logic/core/intro.cns
+st2=logic/combat/unarmed.cns
+st3=logic/core/system.cns
 [Arcade]
 intro.storyboard=
 ending.storyboard=

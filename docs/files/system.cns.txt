@@ -1,0 +1,49 @@
+;==============================================================================
+; LA MASCARA - SISTEMA GLOBAL
+; MUGEN 1.0
+;
+; Fondo de la intro Action 193: SOLO durante la intro 191.
+; El fondo se crea como Explod y se borra al salir de 191.
+;==============================================================================
+
+[Statedef -2]
+
+[State -2, Mostrar fondo 193 solo en Intro 191]
+type = Explod
+triggerall = RoundState = 1
+triggerall = StateNo = 191
+triggerall = Anim = 191
+trigger1 = NumExplod(193) = 0
+ID = 193
+anim = 193
+postype = p1
+pos = 8,-10
+bindtime = -1
+removetime = -1
+sprpriority = -10
+; Factor inicial segun xscale/yscale de La Mascara (0.247).
+; Ajustar solo si las dimensiones reales de la imagen 205 lo requieren.
+scale = 0.25,0.25
+ownpal = 1
+ignorehitpause = 1
+
+; Limpieza: al omitir, saltar o terminar la intro, retirar el Explod.
+[State -2, Retirar fondo 193 fuera de Intro 191]
+type = RemoveExplod
+triggerall = NumExplod(193) > 0
+trigger1 = RoundState != 1
+trigger2 = StateNo != 191
+trigger3 = Anim != 191
+ID = 193
+ignorehitpause = 1
+
+[Statedef -3]
+
+;This controller plays a sound everytime the player lands from a jump, or
+;from a back-dash.
+[State -3, Landing Sound]
+type = PlaySnd
+triggerall = Time = 1
+trigger1 = stateno = 52 ;Jump land
+trigger2 = stateno = 106 ;Run-back land
+value = 40, 0

@@ -1,279 +1,195 @@
-# Raziel — Developer Documentation
+# The Mask — Developer Documentation
+# MUGEN 1.0 | DISEÑO INICIAL (NO CÓDIGO FUNCIONAL)
+# ESTADO: ESTRUCTURA INICIAL / SIN GAMEPLAY DOCUMENTADO
 
-## Estructura del proyecto
+===============================================================================
+REGLA PRINCIPAL
+===============================================================================
 
-```txt
-Raziel_Char/
+Este archivo documenta solamente lo que existe técnicamente.
+
+NO tratar como implementado nada de:
+
+    4. labs.txt
+
+En este documento, PLANIFICADO no significa IMPLEMENTADO.
+Los estados o Actions que figuran en una plantilla AIR con -1,-1 son marcadores
+SIN sprites: no producen gameplay y deben reemplazarse antes de jugar.
+
+===============================================================================
+1. AUDITORÍA DEL CHAR SNES DE REFERENCIA
+===============================================================================
+
+Fuentes revisadas:
+mascara.def, mascara.cns, common1.cns, mascara.cmd y mascara.air.
+Sin reutilizar sprites ni sonidos.
+
+DEF legado:
+- Nombre: 'mascara' / 'La mascara'; autor declarado: Juan Carlos.
+- MugenVersion: 11,29,2000 (no es un proyecto nativo MUGEN 1.0).
+- CMD: mascara.cmd.
+- El mismo mascara.cns se usa como cns y st.
+
+Inventario del texto aportado:
+- mascara.cns: 100 Statedef únicos (incluye -2).
+- mascara.air: 162 Begin Action únicos.
+- mascara.cmd: entradas para movimiento, ataques y técnicas varias.
+
+Sistemas visibles en el CÓDIGO ANTIGUO (NO en nuestra nueva versión):
+- Stand A/B/C (200/210/220), crouch (400/410), air (600/610/620).
+- Intro y cinco variantes de victoria (Estados 181–185).
+- Tornado (1706 y otros), bocinazo, bazuca/misil, bombas y ayudantes.
+- Lógica de especiales, poderes y muchos Helpers/Explods.
+- 'Sentimental Typhoon', 'Rebel Spark' y referencias a personajes ajenos:
+  evidencia de mecánicas adaptadas; no asumir que son propias de The Mask.
+
+Observaciones de mantenimiento:
+- Algunos nombres/acciones de la versión antigua no coinciden directamente:
+  por ejemplo State 220 utiliza Anim 219.
+- CMD referencia States 9100, 9200, 9300 que no aparecen en los CNS aportados.
+- No se ha ejecutado ni validado el char antiguo en MUGEN 1.0.
+Conclusión: aprovecharlo como inventario conceptual, NO copiar el CNS entero.
+
+===============================================================================
+2. ESTRUCTURA PROPUESTA DEL CHAR
+===============================================================================
+
+TheMask_Char/
 ├── assets/
-├── docs/
+│   └── storyboards/
+│
 ├── logic/
+│   ├── core/
+│   │   ├── constants.cns
+│   │   ├── core.cns
+│   │   └── system.cns
+│   ├── commands/
+│   │   └── the_mask.cmd
+│   ├── combat/
+│   │   ├── normals.cns
+│   │   ├── throws.cns
+│   │   ├── specials.cns
+│   │   └── supers.cns
+│   ├── props/
+│   └── ai/
+│
 ├── palette/
-└── raziel.def
-```
+│   ├── mascara.act
+│   └── mascara2.act
+│
+└── mascara.def
 
----
+Responsabilidades base:
 
-# Descripción de carpetas
+core/
+    Estados comunes, constantes, inicialización, variables y lógica global.
 
-## assets/
+commands/
+    CMD e inputs del personaje.
 
-Contiene archivos compilados utilizados por MUGEN:
-
-- `.sff`
-- `.snd`
-- `.air`
-- storyboards
-
----
-
-## docs/
-
-Documentación del proyecto.
-
-Archivos principales:
-
-- autor.txt
-- gameplay.txt
-- desarrollador.txt
-
----
-
-## logic/
-
-Contiene toda la lógica del personaje:
-
-- comandos
-- states
-- IA
-- specials
-- systems
-
-Archivos principales:
-
-| Archivo | Descripción |
-|---|---|
-| raziel.cmd | Inputs y comandos |
-| raziel_core.cns | Estados principales |
-| raziel_specials.cns | Specials |
-| raziel_reaver_system.cns | Sistema Reaver |
-| raziel_fx.cns | Efectos visuales |
-
----
-
-## palette/
-
-Palettes `.act` utilizadas por el personaje.
-
----
-
-## Sprites/
-
-Sprites fuente utilizados durante el desarrollo.
-
-No son cargados directamente por MUGEN.
-
----
-
-# Archivos importantes
-
-## raziel.def
-
-Archivo principal del personaje.
-
-Conecta:
-- sprites
-- sonidos
-- lógica
-- palettes
-- storyboards
-
----
-
-## raziel.cmd
-
-Contiene:
-
-- comandos
-- inputs
-- ChangeState
-- triggers
-- IA futura
-
----
-
-## raziel_core.cns
-
-Contiene:
-
-- Data
-- Size
-- Velocity
-- Movement
-- estados base
-- lógica principal
-
----
-
-## raziel.air
-
-Define las animaciones.
-
-Formato:
-
-```txt
-group, image, x, y, tiempo
-```
-
----
-
-## raziel.sff
-
-Archivo compilado de sprites utilizado por MUGEN.
-
----
-
-# Sistema Soul Reaver
-
-El Soul Reaver funciona mediante:
-
-- Explods persistentes
-- ownpal = 1
-- overlays independientes
-- animaciones separadas por palette
-
----
-
-# IDs del Soul Reaver
-
-| Palette | IDs |
-|---|---|
-| Palette 1 | 7000–7007 |
-| Palette 2 | 7100–7107 |
-
----
-
-# Funcionamiento técnico
-
-El sistema utiliza:
-
-```txt
-type = Explod
-bindtime = -1
-ownpal = 1
-sprpriority = 4
-```
-
-Esto permite:
-
-- mantener el Reaver unido al personaje
-- usar palettes independientes
-- renderizar encima del sprite principal
-
----
-
-# Pipeline de sprites
-
-## Proceso general
-
-1. Creación de sprite base
-2. Conversión 3D
-3. Generación de animación
-4. Export a video
-5. Extracción de frames
-6. Conversión BMP
-7. Importación a SFF
-
----
-
-# Herramientas utilizadas
-
-- ChatGPT
-- Grok
-- Gemini
-- A2E
-- Vidu
-- Fighter Factory
-- Software de edición BMP
-- Software de edición ACT
-
----
-
-# Convenciones de states
-
-| Rango | Uso |
-|---|---|
-| 0–199 | States comunes |
-| 200–299 | Normales de pie |
-| 400–499 | Normales agachado |
-| 600–699 | Normales aéreos |
-| 800–899 | Throws |
-| 1000–1999 | Specials |
-| 3000–3999 | Supers |
-
----
-
-# Convenciones futuras
-
-## Specials
-
-Todos los specials deben separarse en:
-
-```txt
-logic/raziel_specials.cns
-```
-
----
-
-## FX
-
-Todos los efectos deben separarse en:
-
-```txt
-logic/raziel_fx.cns
-```
-
----
-
-## Reaver variants
-
-Cada variante futura del Reaver debe tener:
-
-- palette propia
-- anim IDs independientes
-- Explods separados
-
----
-
-# Recomendaciones para contributors
-
-- Mantener nomenclatura consistente
-- No reutilizar state IDs existentes
-- Mantener palettes indexadas
-- Mantener sprites en BMP indexado
-- Documentar nuevos systems
-
----
-
-# Compatibilidad
-
-Proyecto diseñado para:
-
-- MUGEN 1.0
-
-No compatible oficialmente con:
-
-- WinMUGEN
-- MUGEN 1.1
-
----
-
-# Filosofía del proyecto
-
-Este proyecto es completamente libre para:
-
-- estudiar
-- modificar
-- reutilizar
-- expandir
-
-La intención es mantener el espíritu abierto de la comunidad MUGEN.
+combat/
+    Normals, throws, Specials, Supers y lógica de combate general.
+
+ai/
+    Lógica de IA cuando llegue esa etapa.
+
+Módulos específicos propuestos:
+    - transformations/
+    - props/
+
+===============================================================================
+3. ESTRUCTURA VISUAL PROPUESTA
+===============================================================================
+
+Modos / bloques principales de sprites:
+
+    - 01_BASE
+    - 02_TRANSFORMATIONS
+    - 03_PROPS_WEAPONS
+
+Además:
+
+    00_INTERFACE
+    XX_EFFECTS
+    90_WORK
+    99_ARCHIVE
+
+Cada modo de gameplay usa como base:
+
+    01_Movement
+    02_Standing_Attacks
+    03_Crouching_Attacks
+    04_Air_Attacks
+    05_Throws
+    06_Specials
+    07_Supers
+    08_Intros
+    09_Finishes
+
+===============================================================================
+4. ESTADO TÉCNICO REAL
+===============================================================================
+
+Actualmente documentado:
+
+    - estructura inicial;
+    - separación de responsabilidades;
+    - planificación de carpetas.
+
+Todavía NO documentado como implementado:
+
+    - States definitivos;
+    - Actions definitivas;
+    - variables globales;
+    - Helpers;
+    - Explods;
+    - HitDefs;
+    - comandos finales;
+    - Specials;
+    - Supers;
+    - IA.
+
+Cuando se programe el primer sistema real, añadir aquí:
+- StateNo;
+- Action;
+- variables;
+- archivos responsables;
+- flujo;
+- limitaciones conocidas.
+
+===============================================================================
+5. CONVENCIÓN RECOMENDADA
+===============================================================================
+
+Mantener separados:
+
+CORE
+    comportamiento global.
+
+COMBAT
+    pelea general.
+
+MÓDULOS ESPECÍFICOS
+    sistemas únicos de The Mask.
+
+AI
+    inteligencia artificial.
+
+No crear un archivo gigante si un sistema ya tiene identidad propia.
+
+===============================================================================
+6. PUNTO DE INICIO RECOMENDADO
+===============================================================================
+
+1. Stand.
+2. Turn.
+3. Walk Forward / Back.
+4. Crouch Start / Crouch / Crouch End.
+5. Jump Start / Jump / Fall / Landing.
+6. Run / Dash.
+7. GetHit / Guard.
+8. Seis normals base.
+9. Throw.
+10. Primer Special.
+11. Primer Super.
+12. Sistema único del personaje.

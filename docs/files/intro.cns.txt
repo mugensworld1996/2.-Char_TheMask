@@ -1,0 +1,130 @@
+;==============================================================================
+; LA MASCARA - INTRODUCCIONES CINEMATICAS ESTILO MKX
+; MUGEN 1.0
+;
+; Action 190 = Espera (un fotograma, definida en mascara.air)
+; Action 191 = Intro cinematica A
+; Action 192 = Intro cinematica B
+; Action 193 = Fondo cinematografico (lo administra system.cns)
+;
+; Seleccion del mirror: P1 elige 191 o 192; P2 usa la contraria.
+; Cuando P2 combate otro personaje, elige su propia intro.
+;==============================================================================
+
+[Statedef 190]
+type = S
+movetype = I
+physics = S
+ctrl = 0
+anim = 190
+velset = 0,0
+
+; Mantiene la fase de introduccion mientras se decide la animacion.
+[State 190, Mantener fase de intro]
+type = AssertSpecial
+trigger1 = 1
+flag = Intro
+
+; Si es La Mascara contra La Mascara, P2 debe reproducir la intro opuesta.
+[State 190, Mirror P2 usa 192 cuando P1 usa 191]
+type = ChangeState
+triggerall = RoundState = 1
+triggerall = TeamSide = 2
+triggerall = NumEnemy = 1
+triggerall = EnemyNear, Name = "Mascara"
+trigger1 = EnemyNear, StateNo = 191
+value = 192
+
+[State 190, Mirror P2 usa 191 cuando P1 usa 192]
+type = ChangeState
+triggerall = RoundState = 1
+triggerall = TeamSide = 2
+triggerall = NumEnemy = 1
+triggerall = EnemyNear, Name = "Mascara"
+trigger1 = EnemyNear, StateNo = 192
+value = 191
+
+; P1 selecciona aleatoriamente una de las dos intros.
+[State 190, P1 selecciona intro 191]
+type = ChangeState
+triggerall = RoundState = 1
+triggerall = TeamSide = 1
+trigger1 = Random < 500
+value = 191
+
+[State 190, P1 selecciona intro 192]
+type = ChangeState
+triggerall = RoundState = 1
+trigger1 = TeamSide = 1
+value = 192
+
+; P2 selecciona aleatoriamente si su rival NO es La Mascara.
+[State 190, P2 selecciona intro 191 contra otro personaje]
+type = ChangeState
+triggerall = RoundState = 1
+triggerall = TeamSide = 2
+trigger1 = NumEnemy != 1
+trigger1 = Random < 500
+trigger2 = NumEnemy = 1
+trigger2 = EnemyNear, Name != "Mascara"
+trigger2 = Random < 500
+value = 191
+
+[State 190, P2 selecciona intro 192 contra otro personaje]
+type = ChangeState
+triggerall = RoundState = 1
+triggerall = TeamSide = 2
+trigger1 = NumEnemy != 1
+trigger2 = NumEnemy = 1
+trigger2 = EnemyNear, Name != "Mascara"
+value = 192
+
+; No muestra el fotograma de espera mientras se selecciona 191/192.
+[State 190, Ocultar espera]
+type = AssertSpecial
+trigger1 = 1
+flag = Invisible
+
+;------------------------------------------------------------------------------
+; Intro A: Action 191
+;------------------------------------------------------------------------------
+[Statedef 191]
+type = S
+movetype = I
+physics = S
+ctrl = 0
+anim = 191
+velset = 0,0
+
+[State 191, Mantener intro]
+type = AssertSpecial
+trigger1 = 1
+flag = Intro
+
+[State 191, Terminar intro]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;------------------------------------------------------------------------------
+; Intro B: Action 192
+;------------------------------------------------------------------------------
+[Statedef 192]
+type = S
+movetype = I
+physics = S
+ctrl = 0
+anim = 192
+velset = 0,0
+
+[State 192, Mantener intro]
+type = AssertSpecial
+trigger1 = 1
+flag = Intro
+
+[State 192, Terminar intro]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1

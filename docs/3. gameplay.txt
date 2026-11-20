@@ -1,178 +1,78 @@
-# Raziel — Gameplay Guide
+# The Mask — Gameplay Guide
+# MUGEN 1.0
+# ESTADO: SIN MOVESET DEFINITIVO IMPLEMENTADO
 
-## Información general
+===============================================================================
+IMPORTANTE
+===============================================================================
 
-- Personaje: Raziel
-- Juego de origen: Legacy of Kain: Soul Reaver
-- Engine: MUGEN 1.0
-- Estado: En desarrollo
+Este documento debe contener SOLAMENTE controles que funcionen realmente.
 
----
+Actualmente no se documenta un moveset final para The Mask.
 
-# Controles básicos
+Las ideas de gameplay pertenecen a:
 
-## Layout estándar MUGEN
+    4. labs.txt
 
-```txt
-x  y  z
-a  b  c
-      s
-```
+===============================================================================
+1. LAYOUT MUGEN
+===============================================================================
 
-| Botón | Acción |
-|---|---|
-| x | Golpe débil |
-| y | Golpe medio |
-| z | Golpe fuerte |
-| a | Patada débil |
-| b | Patada media |
-| c | Patada fuerte |
-| s | Taunt |
+    x  y  z
+    a  b  c
+          s
 
----
+===============================================================================
+2. MOVIMIENTO
+===============================================================================
 
-# Movimiento
+Pendiente de validar en código:
 
-| Acción | Input |
-|---|---|
-| Caminar | ← / → |
-| Saltar | ↑ |
-| Dash adelante | → → |
-| Dash atrás | ← ← |
-| Air Jump | En el aire + ↑ |
+    Stand
+    Turn
+    Walk Forward
+    Walk Back
+    Crouch
+    Jump
+    Run / Dash
+    Guard
 
----
+===============================================================================
+3. ATAQUES
+===============================================================================
 
-# Taunt
+Pendiente de implementación / validación:
 
-| Acción | Input |
-|---|---|
-| Taunt | s |
+    Normals de pie
+    Normals agachados
+    Normals aéreos
+    Throw
+    Specials
+    Supers
 
----
+===============================================================================
+4. SISTEMA ÚNICO
+===============================================================================
 
-# Throws
+Todavía no existe un sistema único documentado como implementado.
 
-| Acción | Input |
-|---|---|
-| Throw | Cerca del enemigo + →/← + y o z |
+Consultar ideas en:
 
----
+    4. labs.txt
 
-# Normales de pie
+===============================================================================
+5. REGLA DE MANTENIMIENTO
+===============================================================================
 
-| Movimiento | Input |
-|---|---|
-| Light Punch | x |
-| Medium Punch | y |
-| Heavy Punch | z |
-| Light Kick | a |
-| Medium Kick | b |
-| Heavy Kick | c |
+Cuando un movimiento funcione de verdad, registrar:
 
----
+Input:
+State:
+Action:
+Condiciones:
+Resultado:
+Cancelaciones:
+Coste:
+Notas:
 
-# Normales agachado
-
-| Movimiento | Input |
-|---|---|
-| Crouch Light Punch | ↓ + x |
-| Crouch Medium Punch | ↓ + y |
-| Crouch Heavy Punch | ↓ + z |
-| Crouch Light Kick | ↓ + a |
-| Crouch Medium Kick | ↓ + b |
-| Crouch Heavy Kick | ↓ + c |
-
----
-
-# Normales aéreas
-
-| Movimiento | Input |
-|---|---|
-| Jump Light Punch | Aire + x |
-| Jump Medium Punch | Aire + y |
-| Jump Heavy Punch | Aire + z |
-| Jump Light Kick | Aire + a |
-| Jump Medium Kick | Aire + b |
-| Jump Heavy Kick | Aire + c |
-
----
-
-# Sistema Soul Reaver
-
-El Soul Reaver es un sistema visual persistente implementado mediante overlays y palettes independientes.
-
-Actualmente:
-
-- Se muestra en idle
-- Walk
-- Crouch
-- Transiciones de crouch
-
-Cada palette puede utilizar una variante distinta del Reaver.
-
----
-
-# Palettes disponibles
-
-| Palette | Archivo |
-|---|---|
-| Palette 1 | raziel.act |
-| Palette 2 | raziel2.act |
-| Palette 3 | raziel3.act |
-
----
-
-# Estado actual del gameplay
-
-Actualmente el personaje posee:
-
-- Normales de pie
-- Normales agachado
-- Normales aéreos
-- Throws
-- Dash
-- Air jump
-- Taunt
-- Sistema visual Soul Reaver
-
----
-
-# Contenido pendiente
-
-Aún faltan:
-
-- Special moves
-- Supers
-- IA
-- Más movilidad
-- Más Reavers
-- FX avanzados
-- Balance general
-
----
-
-# Compatibilidad
-
-Este personaje fue diseñado específicamente para:
-
-- MUGEN 1.0
-
-No se garantiza funcionamiento correcto en:
-
-- WinMUGEN
-- MUGEN 1.1
-
----
-
-# Instalación
-
-1. Copiar `Raziel_Char/` dentro de `chars/`
-2. Abrir `data/select.def`
-3. Agregar:
-
-```txt
-Raziel_Char/raziel
-```
-
-4. Iniciar MUGEN y seleccionar el personaje.
+No copiar aquí una idea de Labs hasta que exista en el código.

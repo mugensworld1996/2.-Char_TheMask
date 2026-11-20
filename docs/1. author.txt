@@ -71,9 +71,12 @@
 
 ## Sobre este proyecto
 
-Este proyecto busca recrear a The Mask, el icónico personaje de la película de 1994, como un personaje completamente jugable para MUGEN.
+Este proyecto busca recrear a The Mask, el icónico personaje de la película de 1994, como
+un personaje completamente jugable para MUGEN.
 
-El objetivo es representar el estilo exagerado y caricaturesco del personaje, combinando sus expresiones, humor, transformaciones y movimientos imposibles con un sistema de combate dinámico propio de MUGEN.
+El objetivo es representar el estilo exagerado y caricaturesco del personaje, combinando
+sus expresiones, humor, transformaciones y movimientos imposibles con un sistema de 
+combate dinámico propio de MUGEN.
 
 Actualmente el personaje se encuentra en una etapa temprana de desarrollo.
 
@@ -125,145 +128,119 @@ Actualmente el personaje se encuentra en una etapa temprana de desarrollo.
                                  .:#=.    ::.      :#:
                                   ..-*#*+*#%#*+=+*#+
 
-## Filosofía del proyecto
+===============================================================================
+1. SOBRE ESTE PROYECTO
+===============================================================================
 
-Este proyecto sigue la filosofía clásica de la comunidad MUGEN:
+Personaje:
+    The Mask / La Máscara
 
-> MUGEN es de la comunidad para la comunidad.
+Origen / referencia:
+    The Mask (película de 1994 / Dark Horse)
 
-Todo el contenido aquí presente es completamente libre:
+Estado:
+    Desarrollo inicial / preproducción.
 
-- Libre para usar
-- Libre para modificar
-- Libre para estudiar
-- Libre para redistribuir
+Este proyecto busca convertir a The Mask en un personaje jugable para MUGEN 1.0,
+con sprites nuevos, animaciones propias y un gameplay diseñado alrededor de su
+identidad.
 
-No existen:
-- Paywalls
-- Bloqueos
-- Monetización
-- Restricciones comunitarias
+ACLARACIÓN:
+El archivo original de referencia de SNES es un char distinto, atribuido en su
+DEF a Juan Carlos (VersionDate y MugenVersion: 11,29,2000). NO es el proyecto
+nuevo ni se presentará su código como propio. Se estudia como antecedente.
 
-El objetivo es compartir conocimiento, recursos y contenido con la comunidad.
+===============================================================================
+2. FILOSOFÍA
+===============================================================================
 
-## Desarrollo del personaje
+El proyecto sigue la filosofía comunitaria usada en los demás chars de
+Mugen's World:
 
-Los sprites de este personaje están siendo creados desde cero utilizando distintas herramientas de IA y procesos manuales de edición.
+    MUGEN es de la comunidad para la comunidad.
 
-### Pipeline de desarrollo
+Los recursos creados específicamente para este proyecto se preparan con intención
+de estudio, modificación y reutilización comunitaria, respetando siempre los
+derechos de los propietarios de los personajes y franquicias originales.
 
-1. Creación de sprites base
-2. Conversión a estilo 3D
-3. Generación de animaciones
-4. Conversión a video
-5. Extracción de frames
-6. Conversión final a BMP para MUGEN
+Proyecto fan-made y sin fines comerciales.
 
-### Herramientas utilizadas
+===============================================================================
+3. PIPELINE VISUAL
+===============================================================================
 
-- ChatGPT
-- Grok
-- Gemini
-- A2E
-- Vidu
-- VLC
-- Fighter Factory Clasic
+Pipeline general previsto:
 
-## Base del proyecto
+1. Crear / seleccionar imagen base.
+2. Generar o adaptar apariencia 3D.
+3. Crear animaciones.
+4. Convertir a video cuando corresponda.
+5. Extraer frames.
+6. Limpiar manualmente.
+7. Reescalar al tamaño objetivo del proyecto.
+8. Preparar transparencia / BMP / palette.
+9. Importar al SFF.
+10. Crear AIR, CLSN y lógica MUGEN.
 
-El personaje está siendo desarrollado utilizando una base de código ya existente de MUGEN para agilizar la implementación de estados, física y comportamiento general.
+IMPORTANTE:
+Los archivos originales de alta resolución deben conservarse separados de los
+sprites finales reescalados.
 
-Sobre esa base se están creando desde cero:
+===============================================================================
+4. ESTADO ACTUAL
+===============================================================================
 
-- Nuevos sprites
-- Nuevas animaciones
-- Sistema de ataques
-- Efectos visuales
-- Sonidos
-- Mecánicas propias del personaje
-- Expresiones faciales
-- Variantes futuras
+Este documento se creó como base inicial.
 
-## Características planeadas
+No se asume que existan todavía:
+- moveset definitivo;
+- Specials;
+- Supers;
+- IA;
+- FX definitivos;
+- balance;
+- arquitectura específica terminada.
 
-El objetivo es representar las habilidades más icónicas de The Mask vistas en la película y en otros medios.
+El estado técnico real deberá mantenerse en:
 
-Entre ellas:
+    2. developer.txt
 
-- Expresiones exageradas
-- Transformaciones instantáneas
-- Armas caricaturescas
-- Martillos gigantes
-- Pistolas imposibles
-- Dinamita
-- Bailes
-- Ataques cómicos
-- Objetos saliendo de la nada
-- Movimientos inspirados en caricaturas clásicas
-- Efectos visuales exagerados
+Los controles realmente jugables deberán mantenerse en:
 
-## Estado actual
+    3. gameplay.txt
 
-🚧 Proyecto en desarrollo temprano.
+Las ideas y experimentos deberán mantenerse en:
 
-Actualmente aún faltan:
+    4. labs.txt
 
-- Specials
-- Supers
-- IA
-- Throws
-- Intro
-- Win Poses
-- Taunts
-- FX avanzados
-- Sonidos definitivos
-- Balance general
+===============================================================================
+5. CRÉDITOS
+===============================================================================
 
-## Planes futuros
+Proyecto:
+    Mugen's World
 
-- Más animaciones
-- Ataques cinematográficos
-- Sistema de transformaciones
-- Intro especial
-- Finales
-- Compatibilidad con distintos Screenpacks
-- IA avanzada
-- Nuevos efectos visuales
-- Más referencias a la película
+Personaje / franquicia:
+    The Mask (película de 1994 / Dark Horse)
 
-## Créditos
+Referencia técnica estudiada:
+    char SNES 'La mascara', autor Juan Carlos
 
-### Proyecto actual
-- Mugen's World
+Herramientas del pipeline:
+    ChatGPT
+    Grok
+    Gemini
+    A2E
+    Vidu
+    VLC
+    Fighter Factory Classic
+    Herramientas de edición de imagen
 
-### Herramientas utilizadas
-- ChatGPT
-- Grok
-- Gemini
-- A2E
-- Vidu
+===============================================================================
+6. AVISO
+===============================================================================
 
-### Personaje original
+The Mask y los elementos asociados a su obra/franquicia pertenecen a sus
+respectivos propietarios.
 
-The Mask es un personaje creado por Mike Richardson para Dark Horse Comics.
-
-La adaptación cinematográfica de 1994 fue producida por New Line Cinema.
-
-Todos los derechos del personaje pertenecen a sus respectivos propietarios.
-
-## Notas finales
-
-Gracias a todas las personas que mantienen viva la comunidad MUGEN.
-
-Este proyecto existe gracias al trabajo compartido de desarrolladores, artistas y creadores que durante décadas han mantenido vivo este motor de combate.
-
-The Mask pertenece a sus respectivos propietarios.
-
-Este es un proyecto fan-made, desarrollado con fines educativos, de preservación y entretenimiento, sin ningún propósito comercial.
-
-
-
-
-
-
-Ssssssssssmokin!
+Este es un proyecto fan-made sin fines comerciales.
